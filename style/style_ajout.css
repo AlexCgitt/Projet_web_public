@@ -1,0 +1,233 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav .logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav .login a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+main .title-section {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+main .title-section h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+main .title-section p {
+    color: #818181;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    align-items: flex-start;
+}
+
+.form-container {
+    max-width: 800px;
+    padding: 0 1em;
+}
+
+.image-container {
+    max-width: 400px;
+    padding: 0 1em;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.form-block .full-width {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.form-block .col-half {
+    flex: 0 0 48%;
+}
+
+.form-block .col-full {
+    flex: 0 0 100%;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+.btn-submit {
+    width: 20%;
+    margin-left: 35%;
+    padding: 1em;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f9f9f9;
+    padding: 25px 100px;
+}
+
+footer .centre {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+footer .colonnes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .colonne p {
+    margin: 0.5em 0;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 0.5em;
+}
+
+footer .social-icons a {
+    color: black;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: green;
+}
+
+/* Media Queries pour rendre le header et le site responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+    }
+
+    nav .logo img {
+        width: 100px;
+    }
+
+    nav .login {
+        width: 100%;
+        text-align: right;
+    }
+
+    main .title-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-block .full-width {
+        flex-direction: column;
+    }
+
+    .form-block .col-half {
+        flex: 0 0 100%;
+        margin-bottom: 1em;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin-top: 1em;
+    }
+
+    .btn-submit {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    footer .colonnes {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+    footer .colonne {
+        max-width: 100%; 
+    }
+
+    footer .colonne {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 699px) {
+    #map {
+        display: none; /* Masquer la carte lorsque la largeur est inférieure à 700px */
+    }
+}
